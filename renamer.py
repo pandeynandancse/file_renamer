@@ -1,30 +1,32 @@
 import os
 import shutil
-import pandas as pd
-# Move a file from the directory d1 to d2
+import glob
 
 
 
-
-os.chdir('./images/')
-
+#os.chdir('./images/')
 # Am I in the correct directory?
 # print(os.getcwd())
-
 # print(dir(os))
 # Print all the current file names
 
 
-for index, f in enumerate(os.listdir()):
+from pathlib import Path
+files =  sorted(Path('./image').iterdir(), key=lambda f: f.stat().st_mtime)
+
+# sort according to creation time
+#files =  sorted(Path('./image').iterdir(), key=lambda f: f.stat().st_ctime)
+
+for index, file in enumerate(files):
     # If .DS_Store file is created, ignore it
-    if f == '.DS_Store':
+    if file == '.DS_Store':
         continue
 
-    # file_name, file_ext = os.path.splitext(f)
-    # print(file_name)
+    file_name, file_ext = os.path.splitext(file)
+    print(file_name)
 
     #older images are first then newer iamges and so on.........
-    os.rename(f ,str(index))
-
+    
+    os.rename(f ,str(index) + ".png")
 
 # print(len(os.listdir()))
