@@ -12,10 +12,10 @@ import glob
 
 
 from pathlib import Path
-files =  sorted(Path('./image').iterdir(), key=lambda f: f.stat().st_mtime)
+files =  sorted(Path('./images').iterdir(), key=lambda f: f.stat().st_mtime)
 
 # sort according to creation time
-#files =  sorted(Path('./image').iterdir(), key=lambda f: f.stat().st_ctime)
+#files =  sorted(Path('./images').iterdir(), key=lambda f: f.stat().st_ctime)
 
 for index, file in enumerate(files):
     # If .DS_Store file is created, ignore it
