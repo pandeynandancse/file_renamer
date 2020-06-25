@@ -27,6 +27,6 @@ for index, file in enumerate(files):
 
     #older images are first then newer iamges and so on.........
     
-    os.rename(f ,str(index) + ".png")
+    os.rename(file ,str(index) + ".png")
 
 # print(len(os.listdir()))
