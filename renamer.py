@@ -12,7 +12,8 @@ import glob
 
 
 from pathlib import Path
-files =  sorted(Path('./images').iterdir(), key=lambda f: f.stat().st_mtime)
+path_dir = input("Enter the path of folder where files are located to be renamed:")
+files =  sorted(Path(path_dir).iterdir(), key=lambda f: f.stat().st_mtime)
 
 # sort according to creation time
 #files =  sorted(Path('./images').iterdir(), key=lambda f: f.stat().st_ctime)
