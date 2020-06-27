@@ -1,7 +1,9 @@
 # file_renamer
 python code for renaming files and folders <br>
 
-Place renamer.py file with the folder in which files, that has to be renamed are stored(If you don't want to change code and referring this you can write your own code)<br>
+# How to run <br>
+a) Windows User can run directly activation.bat file<br>
+b) Linux User can run ->   python renamer.py<br>
+c) Enter the file(to be renamed) path when prompted<br> 
+d) output will be generated<br>
 
-eg. Here images is a folder which cotains some image files that has been renamed .<br>
-    In similar way images2 is a folder which contains some image files that are required to be renamed. So python file renamer.py is located adjacent to that image files' folder.
